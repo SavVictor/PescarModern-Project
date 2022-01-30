@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="album py-5">
+        <div class="container">
+            {% for paragraph in paragraphs %}
+                {% if paragraph.id|divisibleby:2 %}
+                    <div class="row featurette">
+                      <div class="col-md-7">
+                        <h2 class="featurette-heading">{{ paragraph.title }}</h2>
+                        <p class="lead">{{ paragraph.description }}</p>
+                      </div>
+                      <div class="col-md-5">
+                        <img class="featurette-image img-fluid mx-auto" src="{{ paragraph.image.url }}" alt="Generic placeholder image">
+                      </div>
+                    </div>
+                {% else %}
+                     <div class="row featurette">
+                      <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">{{ paragraph.title }}</h2>
+                        <p class="lead">{{ paragraph.description }}</p>
+                      </div>
+                      <div class="col-md-5 order-md-1">
+                        <img class="featurette-image img-fluid mx-auto" src="{{ paragraph.image.url }}" alt="Generic placeholder image">
+                      </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

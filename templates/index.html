@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- START INTRO -->
+    <div class="px-4 py-5 text-center bg-dark text-white" id="intro">
+        <h1 class="display-5 fw-bold">Pescar Modern</h1>
+    </div>
+    <!-- END INTRO -->
+
+    <!-- START ABOUT -->
+    <section class="section" id="istoric">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="mt-3">
+                        <img src="/static/img/default-image.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail rounded">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-3">
+                        <h2 class="text-muted"><span class="fw-bold">Scurt Istoric</span></h2>
+                        <h4 class=" text-muted mt-4 fw-bold">Victor <span class="text-custom"></span>Țăruș</h4>
+                        <p class="text-muted mt-4"> Victor Tarus a castigat numeroase titluri la competitiile interne si internationale de casting, pescuit la musca artificiala si pescuit cu naluci, relateaza agromedia.ro. A participant si a fost promotor al echipei nationale la campionatele mondiale de specuit la musca artificiala, casting, pescuit stationar pe cluburi, pescuit cu momeli naturale in ape de munte. </p>
+                        <a href="#" type="button" class="btn btn-light">Pentru mai multe detali</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
+
+    <!-- START MAGAZINES -->
+    <section class="section text-center" id="reviste">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2><span class="fw-bold text-muted">Reviste</span></h2>
+                        <p class="text-muted mx-auto section-subtitle mt-3">TEXT FILLER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4 mb-2 align-items-center justify-content-center">
+                {% for magazine in magazines %}
+                    <div class="col-8 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card border-0 mb-3">
+                            <div class="card-body text-center py-4">
+                                <h4 class="card-title">{{ magazine.title }}</h4>
+                                <p class="card-text mx-5">{{ magazine.description }}</p>
+                                <a href="{{ magazine.get_absolute_url }}" class="btn btn-outline-dark btn-lg mt-3">Citește</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="btn btn-secondary col-md-4 col-lg-2 rounded m-2 p-2 d-none" href="#" role="button">Toate Editiile!</a>
+        </div>
+    </section>
+    <!-- END MAGAZINES -->
+
+{% endblock %}
+

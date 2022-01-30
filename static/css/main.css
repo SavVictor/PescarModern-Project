@@ -1,0 +1,94 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #2e3135;
+}
+
+.section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #2e3135;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.img-thumbnail {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    max-width: 60%;
+    height: auto;
+}
+
+#intro {
+    height: 600px;
+    background-image: url('/static/img/pescari-delta_pe.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#projects {
+    background-color: #212529;
+}
+
+.card {
+    background-color: #b3b3b3;
+}
+
+.footer {
+    position: sticky;
+    top: 100%;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    .card-img-top {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+    }
+    .col-8 {
+        width: 80%
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+    }
+    .col-8 {
+        width: 75%
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 780px) and (max-width: 1200px) {
+    .card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    }
+}
+
+.text-muted {
+    color: #a9b3bb !important;
+}
+
+.modal-body {
+    padding: 0.5rem;
+    background-color: #4d5053 !important;
+}
+
+
